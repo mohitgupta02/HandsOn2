@@ -1,3 +1,11 @@
+/*
+============================================================================
+	Gupta Mohit
+	MT2024049
+	6. Write a simple program to create three threads.
+============================================================================
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<pthread.h>
@@ -47,3 +55,30 @@ printf("%d\n",n);
 }
 }
 
+/*
+============================================================================
+mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ gcc 6.c -lpthread
+mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ ./a.out 
+Inside the thread 1  0
+1
+2
+3
+4
+Inside the thread 2  0
+1
+2
+3
+4
+Inside the thread 3  0
+1
+2
+3
+4
+After Thread11
+12
+13
+14
+15
+
+============================================================================
+*/
