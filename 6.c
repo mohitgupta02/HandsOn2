@@ -1,9 +1,7 @@
 /*
-============================================================================
-	Gupta Mohit
-	MT2024049
-	6. Write a simple program to create three threads.
-============================================================================
+Gupta Mohit
+MT2024049
+6. Write a simple program to create three threads.
 */
 
 #include<stdio.h>
@@ -56,7 +54,6 @@ printf("%d\n",n);
 }
 
 /*
-============================================================================
 mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ gcc 6.c -lpthread
 mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ ./a.out 
 Inside the thread 1  0
@@ -79,6 +76,4 @@ After Thread11
 13
 14
 15
-
-============================================================================
 */
