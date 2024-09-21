@@ -49,5 +49,13 @@ void main()
     close(socktd);
 }
 /*
+mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ gcc 34a_client.c -o clienta
+mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ ./clienta
+Socket created
+Connection with server established
+Data from server: hello mohit here
+Write massage for server: 
+hello mohit
+Data sent to server
 
 */

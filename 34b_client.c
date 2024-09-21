@@ -49,4 +49,14 @@ void main()
 }
 /*
 
+mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ gcc 34b_client.c -o clientb
+mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ ./clientb
+Socket created
+Connection with server established
+Data from server: Hello from server
+
+Write massage for server: 
+new message
+Data sent to server
+
 */

@@ -71,5 +71,12 @@ void main()
     close(socktd);
 }
 /*
+mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ gcc 34a_server.c -o servera
+mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ ./servera
+server Socket created
+Binding to server socket was successful!
+Listning from Connection 
+Write massage form server to client: 
+hello mohit here
 
 */

@@ -73,5 +73,12 @@ void main()
     close(socktd);
 }
 /*
+mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ gcc 34b_server.c -o serverb
+mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ ./serverb
+server Socket created
+Binding to server socket was successful!
+Listning from Connection 
+Data from client : new message
+this is new  
 
 */

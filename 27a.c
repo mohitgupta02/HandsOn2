@@ -4,33 +4,64 @@ Mohit Gupta
 Write a program to receive messages from the message queue.
 a. with 0 as a flag
 */
-#include <stdio.h>
+#include <sys/types.h>
 #include <sys/ipc.h>
 #include <sys/msg.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <errno.h>
 
-typedef struct mesg_buffer
-{
-    long mesg_type;
-    char mesg_text[100];
-} mesg_buffer;
 int main()
 {
-    mesg_buffer message;
-    key_t key = ftok(".", 1);
-    int msgid = msgget(key, 0666 | IPC_CREAT);
-//    printf("enter msgtype:\n");
-//    scanf("%ld", &message.mesg_type);
-    int size_s = msgrcv(msgid, &message, sizeof(message), message.mesg_type, 0); 
-    if (size_s <= 0)
+    key_t queueKey;
+    int queueIdentifier;
+    int messageSize;
+
+    struct msgbuf
     {
-        perror("No message in queue\n");
-    }
-    else
+        long mtype;
+        int someNumber;
+    } data;
+
+    queueKey = ftok(".", 1);
+
+    if (queueKey == -1)
     {
-        printf("Message: %s\n", message.mesg_text);
+        perror("Error while computing key!\n");
+        _exit(0);
     }
+
+    queueIdentifier = msgget(queueKey, IPC_CREAT | 0700);
+
+    if (queueIdentifier == -1)
+    {
+        perror("Error while creating message queue!\n");
+        _exit(0);
+    }
+
+    printf("Key: %d\n", queueKey);
+    printf("Message Queue Identifier: %d\n\n", queueIdentifier);
+
+    data.mtype = 1;
+    data.someNumber = 1;
+
+    messageSize = msgrcv(queueIdentifier, &data, sizeof(data), data.mtype, 0);
+
+    if (messageSize == -1)
+    {
+        perror("Error while sending message via Message Queue!\n");
+        _exit(0);
+    }
+
+    printf("Received number: %d\n", data.someNumber);
+
     return 0;
 }
 /*
+mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ gcc 27a.c -o 27a
+mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ ./27a
+Key: 16918610
+Message Queue Identifier: 0
+Received number: 100
 
 */

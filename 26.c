@@ -9,7 +9,6 @@ Write a program to create a message queue and print the key and message queue id
 #include <stdio.h>
 #include <unistd.h>
 #include <errno.h>
-
 int main()
 {
     key_t queueKey;
@@ -56,11 +55,9 @@ int main()
 
     return 0;
 }
-
 /*
 mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ gcc 26.c
-mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ sudo ./a.out 
-[sudo] password for mohit: 
+mohit@mohit-VMware-Virtual-Platform:~/Desktop/HandsOn2$ ./a.out 
 Key: 16918610
 Message Queue Identifier: 0
 
