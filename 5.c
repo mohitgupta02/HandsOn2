@@ -24,7 +24,7 @@ void main()
     printf("Maximum number of simultaneous process per user id -%ld\n", val);
 
     val = sysconf(_SC_CLK_TCK);
-    printf("Number of clock ticks (jiffy) per second -%ld\n", val);
+    printf("Number of clock ticks per second -%ld\n", val);
 
     val = sysconf(_SC_OPEN_MAX);
     printf("Maximum number of open files -%ld\n", val);
