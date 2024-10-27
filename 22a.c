@@ -25,7 +25,7 @@ void main()
     }
     FD_ZERO(&fd);
     FD_SET(f, &fd);
-    t.tv_sec = 5;
+    t.tv_sec = 10;
     t.tv_usec = 0;
     int o = select(f + 1, &fd, NULL, NULL, &t);
     if (o == -1)
