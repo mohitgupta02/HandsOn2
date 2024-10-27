@@ -1,7 +1,7 @@
 /*
 MT2024049
 Mohit Gupta
-Write a program to create a message queue and print the key and message queue id.
+Write a program to send messages to the message queue. Check $ipcs -q.
 */
 #include <sys/types.h>
 #include <sys/ipc.h>
